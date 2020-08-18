@@ -8,13 +8,14 @@ public class Defragment {
             if (array[index] == null) {
                 point = index; /* указатель на null ячейку. */
                 /* переместить первую не null ячейку. Нужен цикл. */
-            }
-            if (array[index] != null) {
-                notNullIndex = index;
-                if (point < notNullIndex) {
-                    String temp = array[point];
-                    array[point] = array[notNullIndex];
-                    array[notNullIndex] = temp;
+                for (index = point + 1; index < array.length; index++) {
+                    if (array[index] != null) {
+                        notNullIndex = index;
+                        String temp = array[point];
+                        array[point] = array[notNullIndex];
+                        array[notNullIndex] = temp;
+                    }
+                    break;
                 }
             }
         }
