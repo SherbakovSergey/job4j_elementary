@@ -9,8 +9,10 @@ public class PointTest {
 
     @Test
     public void whenXTwo() {
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2);
         double expected = 2.0;
-        double out = Point.distance(0, 0, 2, 0);
+        double out = a.distance(b);
         Assert.assertEquals(expected, out,0.1);
     }
 }
