@@ -18,12 +18,10 @@ public class Library {
         Book temp = books[0];
         books[0] = books[3];
         books[3] = temp;
-        System.out.println("Clean code");
         for (int i = 0; i < books.length; i++) {
             Book bk = books[i];
-            if (bk.equals("Clean code")) {
+            if (bk.getName().equals("Clean code")) {
                 System.out.println(bk.getName() + " " + bk.getPage());
-                break;
             }
         }
     }
